@@ -1,10 +1,13 @@
 import React from 'react';
+import Map from './../components/Map';
+
+import './../statics/utils.css';
 
 class App extends React.Component {
     render(){
         return (
-            <div className="container">
-                <h1>Mapping</h1>
+            <div>
+                <Map/>
             </div>
         );
     }

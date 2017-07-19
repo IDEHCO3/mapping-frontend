@@ -21,7 +21,7 @@ const config = {
 	module: {
 		loaders: [
 			{
-				test: /\.jsx?$/,
+				test: /\.js$/,
 				include: [
 					path.resolve(__dirname, 'src')
 				],
@@ -31,6 +31,10 @@ const config = {
 					plugins: ['transform-runtime']
 				}
 			},
+            {
+                test: [/\.jsx$/],
+                loaders: ["jsx-loader?insertPragma=React.DOM&harmony"],
+            },
 			{
 				test: /\.css$/,
 				loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
